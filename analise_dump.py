@@ -8,7 +8,7 @@ OUTPUT_CSV = 'dataset_dump.csv' # Arquivo final para o Excel/Pandas
 TIME_WINDOW = 1.0                   # Janela de 1 segundo
 
 def extract_features_rich(pcap_path):
-    print(f"🚀 Iniciando extração profunda de: {pcap_path}")
+    print(f" Iniciando extração profunda de: {pcap_path}")
     
     # Dicionário principal.
     # Chave: (SrcIP, DstIP, Sport, Dport, Proto, WindowIndex)
@@ -99,7 +99,7 @@ def extract_features_rich(pcap_path):
                 if 'F' in flags: f['flags_fin'] += 1
 
     # --- CÁLCULOS ESTATÍSTICOS FINAIS ---
-    print("📊 Calculando estatísticas e gerando CSV...")
+    print(" Calculando estatísticas e gerando CSV...")
     
     dataset = []
     
@@ -197,7 +197,7 @@ def extract_features_rich(pcap_path):
         
     df = pd.DataFrame(dataset)
     df.to_csv(OUTPUT_CSV, index=False)
-    print(f"✅ Concluído! Dataset salvo em {OUTPUT_CSV} com {len(df)} linhas.")
+    print(f" Concluído! Dataset salvo em {OUTPUT_CSV} com {len(df)} linhas.")
 
 # Executar
 if __name__ == "__main__":
