@@ -1,4 +1,5 @@
 Vagrant.configure("2") do |config|
+config.vm.synced_folder ".", "/vagrant", type: "rsync"
   # VM Cliente  (L4S)
   config.vm.define "client-l4s" do |client|
     client.vm.box = "ubuntu/focal64"
@@ -64,6 +65,7 @@ Vagrant.configure("2") do |config|
 
   # VM Roteador (Central de Rotas)
   config.vm.define "router" do |router|
+    router.vm.synced_folder ".", "/vagrant", type: "rsync"
     router.vm.box = "ubuntu/focal64"
     router.vm.hostname = "router"
     # --- Configurações de Hardware ---
