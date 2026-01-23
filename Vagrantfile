@@ -65,7 +65,7 @@ config.vm.synced_folder ".", "/vagrant", type: "rsync"
 
   # VM Roteador (Central de Rotas)
   config.vm.define "router" do |router|
-    router.vm.synced_folder ".", "/vagrant", type: "rsync"
+    router.vm.synced_folder ".", "/vagrant", type: "virtualbox"
     router.vm.box = "ubuntu/focal64"
     router.vm.hostname = "router"
     # --- Configurações de Hardware ---
