@@ -1,5 +1,8 @@
 .vagrant
 .git
 ./fluxo_benigno.pcap
+.gitignore
+plot_bandwidtch.py
+
 
 *.pcap

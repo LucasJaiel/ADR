@@ -1,0 +1,13 @@
+====SERVERs===
+iperf -s &
+
+=====CLIENTs====
+
+CLIENT L4S: iperf -c 192.168.57.10 -t 60 -i 1 -Z prague > ataque_l4s.txt
+
+
+CLIENT CLASSIC:
+iperf -c 192.168.57.20 -t 60 -i 1 -Z cubic > ataque_classic.txt
+iperf -c 192.168.57.20 -t 60 -i 1 -Z cubic > ataque_malicioso.txt
+
+
